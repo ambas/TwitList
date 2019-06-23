@@ -22,12 +22,15 @@ class TweetView: UIView {
     }
     
     func configureView() {
+        backgroundColor = .blue
         let redView = UIView()
         redView.backgroundColor = .red
         let greenView = UIView()
         greenView.backgroundColor = .green
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = UIStackView.spacingUseSystem
         
         stackView.addArrangedSubview(redView)
         stackView.addArrangedSubview(greenView)
